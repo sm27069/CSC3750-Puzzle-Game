@@ -4,8 +4,15 @@ td { width: 90px; vertical-align: top; text-align: left; font-size: 22px; font-w
 button { padding: 10px 20px; margin: 0 6px; background: #006341; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
 
 /* Every tile is a 90x90 slice of the 360x360 picture (path is relative to this CSS file) */
-td[class^="tile"] { background-image: url("wsu_sunset.jpeg"); background-size: 360px 360px; }
-td.tile16 { background: white; cursor: default; }  /* td. keeps this rule stronger than the td[class^] rule above */
+td[class^="tile"] {
+  background-image: url("./wsu_sunset.jpeg");
+  background-size: 360px 360px;
+}
+
+td.tile16 {
+  background: white;
+  cursor: default;
+}
 .tile1 { background-position: -0px -0px; }
 .tile2 { background-position: -90px -0px; }
 .tile3 { background-position: -180px -0px; }
