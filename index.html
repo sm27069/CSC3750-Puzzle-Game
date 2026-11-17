@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WSU Campus Sunset Puzzle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>WSU Campus Sunset Puzzle</h1>
+  <p>Click a tile next to the empty slot to move it. Put the tiles in order, row by row.</p>
+  <p>Moves: <span id="moves">0</span> &nbsp;|&nbsp; Time: <span id="time">0</span> sec</p>
+
+  <table id="board">
+    <tr><td id="cell11"></td><td id="cell12"></td><td id="cell13"></td><td id="cell14"></td></tr>
+    <tr><td id="cell21"></td><td id="cell22"></td><td id="cell23"></td><td id="cell24"></td></tr>
+    <tr><td id="cell31"></td><td id="cell32"></td><td id="cell33"></td><td id="cell34"></td></tr>
+    <tr><td id="cell41"></td><td id="cell42"></td><td id="cell43"></td><td id="cell44"></td></tr>
+  </table>
+
+  <button onclick="newGame()">New Game</button>
+  <button onclick="simpleGame()">Simple Game</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
