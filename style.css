@@ -1,30 +1,70 @@
-body { font-family: Arial, sans-serif; text-align: center; background: #fff1e6; color: #006341; }
-table { margin: 20px auto; border-collapse: collapse; }
-td { width: 90px; vertical-align: top; text-align: left; font-size: 22px; font-weight: bold; color: white; text-shadow: 1px 1px 3px black; text-indent: 6px; height: 90px; padding: 0; cursor: pointer; }
-button { padding: 10px 20px; margin: 0 6px; background: #006341; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
 
-/* Every tile is a 90x90 slice of the 360x360 picture (path is relative to this CSS file) */
-td[class^="tile"] {
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fff1e6;
+  color: #006341;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+td {
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  vertical-align: top;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  text-indent: 6px;
+  cursor: pointer;
+}
+
+/* Sunset picture split into 16 puzzle tiles */
+td:not(.tile16) {
   background-image: url("./wsu_sunset.jpeg");
   background-size: 360px 360px;
+  background-repeat: no-repeat;
 }
 
 td.tile16 {
   background: white;
   cursor: default;
 }
-.tile1 { background-position: -0px -0px; }
-.tile2 { background-position: -90px -0px; }
-.tile3 { background-position: -180px -0px; }
-.tile4 { background-position: -270px -0px; }
-.tile5 { background-position: -0px -90px; }
-.tile6 { background-position: -90px -90px; }
-.tile7 { background-position: -180px -90px; }
-.tile8 { background-position: -270px -90px; }
-.tile9 { background-position: -0px -180px; }
+
+/* Tile positions */
+.tile1  { background-position: 0 0; }
+.tile2  { background-position: -90px 0; }
+.tile3  { background-position: -180px 0; }
+.tile4  { background-position: -270px 0; }
+
+.tile5  { background-position: 0 -90px; }
+.tile6  { background-position: -90px -90px; }
+.tile7  { background-position: -180px -90px; }
+.tile8  { background-position: -270px -90px; }
+
+.tile9  { background-position: 0 -180px; }
 .tile10 { background-position: -90px -180px; }
 .tile11 { background-position: -180px -180px; }
 .tile12 { background-position: -270px -180px; }
-.tile13 { background-position: -0px -270px; }
+
+.tile13 { background-position: 0 -270px; }
 .tile14 { background-position: -90px -270px; }
 .tile15 { background-position: -180px -270px; }
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 0 6px;
+  background: #006341;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
